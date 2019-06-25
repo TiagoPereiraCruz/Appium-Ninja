@@ -1,4 +1,4 @@
-require_relative "Android/screens"
+require_relative "android/screens"
 
 class DroidScreens
   attr_accessor :home, :login, :my_account
