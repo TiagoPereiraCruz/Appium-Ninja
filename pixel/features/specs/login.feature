@@ -1,4 +1,3 @@
-# login.feature
 #language: pt
 
 Funcionalidade: Login
@@ -6,6 +5,7 @@ Funcionalidade: Login
     Sendo um usuário cadastro
     Posso me autenticar pela tela de login
 
+    @login_happy
     Cenario: Usuário logado
 
         Dado que acesso a tela de login
