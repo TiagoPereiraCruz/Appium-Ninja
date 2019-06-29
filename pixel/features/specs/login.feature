@@ -9,7 +9,7 @@ Funcionalidade: Login
     Cenario: Usuário logado
 
         Dado que acesso a tela de login
-        Quando eu faço login com "tony@stark.com" e "pass123"
+        Quando eu faço login com "tiagopereira1988@hotmail.com" e "t1p9d8c8"
         Então posso ver a tela minha conta
 
     @login_happiless
@@ -20,11 +20,11 @@ Funcionalidade: Login
         Então devo ver <mensagem> como popup
 
     Exemplos:
-        | email                   | senha     | mensagem                            |
-        | "tony@stark.com"        | "123pass" | "Usuário e/ou senha inválidos."     |
-        | "adam.warlok#yahoo.com" | "123pass" | "Usuário e/ou senha inválidos."     |
-        | ""                      | "123pass" | "Todos os campos são obrigatórios." |
-        | "tony@stark.com"        | ""        | "Todos os campos são obrigatórios." |
+        | email                                 | senha     | mensagem                            |
+        | "tiagopereira1988@hotmail.com"        | "123pass" | "Usuário e/ou senha inválidos."     |
+        | "adam.warlok#yahoo.com"               | "123pass" | "Usuário e/ou senha inválidos."     |
+        | ""                                    | "123pass" | "Todos os campos são obrigatórios." |
+        | "tiagopereira1988@hotmail.com"        | ""        | "Todos os campos são obrigatórios." |
 
     @last_try
     Cenario: Login na 3a tentativa

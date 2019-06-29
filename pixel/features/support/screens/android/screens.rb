@@ -4,7 +4,7 @@ class Home
   end
 
   def choose_cat(cat)
-    find_element(id: "qaninja.com.pixel:id/cCatNameTxt").text(cat).click
+    find_elements(id: "qaninja.com.pixel:id/cCatNameTxt").text(cat).click
   end
 end
 
@@ -28,7 +28,7 @@ end
 
 class Product
   def go_to(product)
-    find_element(id: "qaninja.com.pixel:id/cpProdNameTxt").text(product).click
+    find_elements(id: "qaninja.com.pixel:id/cpProdNameTxt").text(product).click
   end
 
   def add_to_cart
