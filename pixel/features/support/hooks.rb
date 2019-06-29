@@ -3,17 +3,18 @@ Before do
   driver.manage.timeouts.implicit_wait = 10
 
   device_type = "Android"
-
-  if (device_type == "Android")
-
-  end
-
-  if (device_type == "IoS")
-
-  end
+  @screen = DroidScreens.new if device_type.eql?("android")
+  @screen = IOSScreen.new if device_type.eql?("ios")
 end
 
+Before("@login") do
+  @screen.home.go_account
+  @screen.login.with("tony@stark.com", "pass123")
+end
 
 After do
+  screenshot = driver.screenshot_as(:base64)
+  embed(screenshot, "image/png", "Screenshot")
+
   driver.quit_driver
 end
