@@ -13,4 +13,8 @@ class DroidScreens
   def popup
     find_element(id: "android:id/message")
   end
+
+  def accept_popup
+    find_element(id: "android:id/button1").click
+  end
 end
