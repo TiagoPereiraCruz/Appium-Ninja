@@ -12,7 +12,7 @@ Funcionalidade: Adicionar item ao carrinho
     Quando eu adiciono este item ao carrinho
     Então devo ver o alerta "Você adicionou F-Zero ao seu carrinho!"
 
-    @wip @clean_cart
+    @clean_cart
     Cenario: Usuário não logado adiciona produto
 
       Dado que eu quero comprar "Golden Axe" do "Mega Drive"
