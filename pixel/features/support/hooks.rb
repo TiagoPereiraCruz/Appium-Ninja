@@ -3,7 +3,7 @@ require "date"
 
 Before do
   driver.start_driver
-  driver.manage.timeouts.implicit_wait = 10
+  driver.manage.timeouts.implicit_wait = 20
 
   device_type = "android"
   @screen = DroidScreens.new if device_type.eql?("android")
@@ -11,13 +11,13 @@ Before do
 end
 
 Before("@login") do
-  @user = {email: "tiagopereira1988@hotmail.com", pass: "t1p9d8c8"}
+  @user = { email: "tiagopereira1988@hotmail.com", pass: "t1p9d8c8" }
   @screen.home.go_account
   @screen.login.with(@user[:email], @user[:pass])
 end
 
 Before("@clean_cart") do
-  @user = {email: "tiagopereira1988@hotmail.com", pass: "t1p9d8c8"}
+  @user = { email: "tiagopereira1988@hotmail.com", pass: "t1p9d8c8" }
   PixelApi.new.remove_my_cart(@user[:email])
 end
 
@@ -32,7 +32,7 @@ at_exit do
   @infos = {
     "device" => "Android",
     "environment" => "Dev",
-    "Data do Teste" => Time.now.to_s
+    "Data do Teste" => Time.now.to_s,
   }
 
   ReportBuilder.configure do |config|

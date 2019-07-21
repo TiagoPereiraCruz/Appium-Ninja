@@ -19,9 +19,3 @@ Funcionalidade: Adicionar item ao carrinho
       Quando eu adiciono este item ao carrinho
       Mas preciso fazer login para adicionar o produto
       Então devo ver o alerta "Você adicionou Golden Axe ao seu carrinho!"
-
-      Cenario: Finalizar
-
-        Dado que eu tenho o produto "Golden Axe" do "Mega Drive"
-        Quando eu finalizo a comprar
-        Então deve gerar um novo item em minhas compras

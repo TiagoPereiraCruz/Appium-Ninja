@@ -20,8 +20,8 @@ end
 Dado("que eu adicionei os seguintes itens no meu carrinho:") do |table|
   products = table.hashes
   products.each do |product|
-    @screen.home.choose_cat(product['cateogoria'])
-    @screen.product.go_to(product['produto'])
+    @screen.home.choose_cat(product["categoria"])
+    @screen.product.go_to(product["produto"])
     @screen.product.add_to_cart
     @screen.accept_popup
     2.times { @screen.home.go_back }
@@ -32,4 +32,7 @@ end
 
 Quando("eu finalizo a minha compra com a conta:") do |table|
   @screen.cart.checkout
+  @screen.paypal_login(table.rows_hash)
+  @screen.pay_pal
+  @screen.wait_popup("Pixel")
 end

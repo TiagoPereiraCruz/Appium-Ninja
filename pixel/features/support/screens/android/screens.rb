@@ -68,6 +68,6 @@ class Cart
   end
 
   def checkout
-    find_element(id "qaninja.com.pixel:id/cartCheckoutButt").click
+    find_element(id: "qaninja.com.pixel:id/cartCheckoutButt").click
   end
 end

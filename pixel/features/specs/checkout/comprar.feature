@@ -6,7 +6,7 @@ Funcionalidade: Finalizar Compra
     Sendo um usuário que possui itens no carrinho
     Posso finalizar a compra de jogos ou consoles
 
-    @wip @clean_cart
+    @checkout @clean_cart
     Cenario: Pagar com Paypal
         Dado que eu adicionei os seguintes itens no meu carrinho:
             | categoria      | produto |
@@ -14,4 +14,4 @@ Funcionalidade: Finalizar Compra
         Quando eu finalizo a minha compra com a conta:
             | email | test@qaninja.io |
             | senha | qaninja123456   |
-        Então devo ver o alerta "Você pagou seu pedido atraves do PayPal! Entregaremos sua encomenda o mais rápido possível"
+        Então devo ver o alerta "Você pagou seu pedido atraves do PayPal! Entregaremos sua encomenda o mais rápido possível!"
